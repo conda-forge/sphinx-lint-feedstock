@@ -1,8 +1,8 @@
 {% set name = "sphinx-lint" %}
 {% set import = "sphinxlint" %}
 {% set entrypoint = "sphinx-lint" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "6eafdb44172ce526f405bf36c713eb246f1340ec2d667e7298e2487ed76decd2" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "2b054ff3270fce56a8a18737665dd8ab04f45d8bfdf3a57a2313970b527ad612" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - {{ entrypoint }} = {{ import }}.cli:main
